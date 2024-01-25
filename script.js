@@ -1,10 +1,10 @@
-
+const main = document.getElementById('main');
 const inputbox = document.getElementById('mood');
 const outbox = document.getElementById('moodbox');
 const outerbox = document.getElementById('outbox');
 const textyap = document.getElementById('textyap');
 const thebody = document.getElementById('bodyid');
-moodbox.addEventListener('click', moodchange);
+inputbox.addEventListener('change', moodchange);
 
 function moodchange() {
     if (inputbox.value == "bananas") { 
@@ -20,13 +20,10 @@ function moodchange() {
         outbox.style.backgroundColor = "pink";
     }
     else if (inputbox.value == "alone") {
-        outbox.remove()
-        outerbox.remove()
-        inputbox.remove()
-        textyap.remove()
-        window.close();
         document.body.style.backgroundColor = "black";
-        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+        main.remove();
+        document.body.requestFullscreen();
+        
     }
     else 
     outbox.style.backgroundColor = "grey";   
